@@ -1,0 +1,27 @@
+{
+  "name": "banco_profissionais_negros",
+  "version": "1.0.0",
+  "description": "banco de profissionais negros",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lidianeangelo/Banco_Profissionais_Negros.git"
+  },
+  "author": "Lidiane Angelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lidianeangelo/Banco_Profissionais_Negros/issues"
+  },
+  "homepage": "https://github.com/Lidianeangelo/Banco_Profissionais_Negros#readme"
+}
