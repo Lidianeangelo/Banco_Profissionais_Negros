@@ -1,7 +1,8 @@
+const { response } = require("express")
 //const perfilCollection = require("../data/data.json") //quando tem um arquivo json
 const perfilCollectionLista = require("../model/perfilSchema")
 
-//GET
+//GET Lista de Perfis
 const getAllPerfil = (request, response) => {
     console.log(request.url)
     perfilCollectionLista.perfilCollection.find((error, perfil) => {
@@ -14,7 +15,7 @@ const getAllPerfil = (request, response) => {
 
 }
 
-//GET ID
+//GET Filtro por ID
 const getPerfilById = (request, response) => {
     const id = request.params.id
 
@@ -34,7 +35,7 @@ const getPerfilById = (request, response) => {
     )
 }
 
-//POST
+//POST Adicionar Perfil
 const addPerfil = (request, response) => {
     const perfilBody = request.body
     const perfilNovo = new perfilCollectionLista.perfilCollection(perfilBody)
@@ -52,7 +53,7 @@ const addPerfil = (request, response) => {
 }
 
 
-
+//DELETE Deletar Perfil
 const deletePerfilById = (request, response) => {
     const idParam = request.params.id
     perfilCollectionLista.perfilCollection.findByIdAndDelete({ _id: idParam }, (error, perfil) => {
@@ -64,22 +65,34 @@ const deletePerfilById = (request, response) => {
     })
 }
 
+//PUT Atualizar Perfil Todo
 const updatePerfil = (request, response) => {
     const id = request.params.id
     const body = request.body
     const update = { new: false }
-
-    //tratamento do erro - fazer
-
-    perfilCollectionLista.perfilCollection.findOneAndUpdate(id, body,update,
-        /*{ _id: id }, body, update,*/(error, perfil) => {
-            if (error) {
-                return response.status(400).send(error)
-            } else {
-                return response.status(200).send({ mensage: 'Cadastro atualizado com sucesso!', perfil })
-            }
-        })
+    perfilCollectionLista.perfilCollection.findOneAndUpdate(id, body, update, (error, perfil) => {
+        if (error) {
+            return response.status(400).send(error)
+        } else {
+            return response.status(200).send({ mensage: 'Cadastro atualizado com sucesso!', perfil })
+        }
+    })
 }
+
+//PATCH Atualiza parte do Código
+const updatePartePerfil = (request, response) => {
+    const id = request.params.id
+    const body = request.body
+    const update = { new: true }
+    perfilCollectionLista.perfilCollection.findOneAndUpdate({ _id: id }, body, update, (error, perfil) => {
+        if (error) {
+            return response.status(404).send(error)
+        } else {
+            return response.status(200).send({ mensage: 'Nível atualizado com sucesso!', perfil })
+        }
+    })
+}
+
 
 
 module.exports = {
@@ -87,5 +100,8 @@ module.exports = {
     getPerfilById,
     addPerfil,
     deletePerfilById,
-    updatePerfil
+    updatePerfil,
+    updatePartePerfil
+   
+
 }
