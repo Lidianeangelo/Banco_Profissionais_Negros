@@ -1,12 +1,18 @@
-const express=require("express")
-const router=express.Router()
+const express = require('express');
+const router = express.Router();
+const cors = require("cors")
 const controller=require("../controller/perfilController")
 
-//router.get("/", controller.)
-//router.get("/id/:id", controller.getContatosById)
-//router.get("/nome/:nome", controller.getContatosByNome)
-//router.post("/criar", controller.addContato)
-//router.delete("/deletar/:id", controller.deleteContatoById)
-//router.put("/atualizar/telefone/:id", controller.updateTelefone)
+router.get("/", cors(),controller.getAllPerfil)
+router.get("/id/:id", cors(),controller.getPerfilById)
+router.post("/perfilNovo", cors(),controller.addPerfil)
+router.delete("/delete/:id", cors(),controller.deletePerfilById)
+router.put("/atualiza/:id", cors(),controller.updatePerfil)
+router.patch("/atualiza/perfil/:id",cors(),controller.updatePartePerfil)
 
-module.exports=router
+
+
+
+module.exports=router;
+
+
