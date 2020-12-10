@@ -1,6 +1,10 @@
 const app=require("./src/app")
 const mongoose=require("mongoose")
-const PORT=8081
+
+const dotenv=require("dotenv")
+dotenv.config()
+
+const PORT=process.env.PORT
 
 app.listen(PORT, function(){
     console.log(`Servidor rodando na porta ${PORT}`)
