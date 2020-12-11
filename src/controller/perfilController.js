@@ -58,7 +58,7 @@ const deletePerfilById = (request, response) => {
     const idParam = request.params.id
     perfilCollectionLista.perfilCollection.findByIdAndDelete({ _id: idParam }, (error, perfil) => {
         if (error) {
-            return response.status(404).send("Contato não encontrado")
+            return response.status(404).send(error)
         } else {
             return response.status(200).send("Contato deletado com sucesso")
         }
@@ -72,9 +72,9 @@ const updatePerfil = (request, response) => {
     const update = { new: false }
     perfilCollectionLista.perfilCollection.findOneAndUpdate(id, body, update, (error, perfil) => {
         if (error) {
-            return response.status(400).send(error)
+            return response.status(404).send(error)
         } else {
-            return response.status(200).send({ mensage: 'Cadastro atualizado com sucesso!', perfil })
+            return response.status(200).send({ mensagem: 'Cadastro atualizado com sucesso!', perfil })
         }
     })
 }
@@ -88,7 +88,7 @@ const updatePartePerfil = (request, response) => {
         if (error) {
             return response.status(404).send(error)
         } else {
-            return response.status(200).send({ mensage: 'Campo atualizado com sucesso!', perfil })
+            return response.status(200).send({ mensagem: 'Campo atualizado com sucesso!', perfil })
         }
     })
 }
