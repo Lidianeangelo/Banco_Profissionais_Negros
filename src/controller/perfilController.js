@@ -55,10 +55,10 @@ const addPerfil = (request, response) => {
 
 //DELETE Deletar Perfil
 const deletePerfilById = (request, response) => {
-    const idParam = request.params.id
-    perfilCollectionLista.perfilCollection.findByIdAndDelete({ _id: idParam }, (error, perfil) => {
+    const id = request.params.id
+    perfilCollectionLista.perfilCollection.findByIdAndDelete({ _id: id }, (error, perfil) => {
         if (error) {
-            return response.status(404).send(error)
+            return response.status(404).send("Contato não encontrado")
         } else {
             return response.status(200).send("Contato deletado com sucesso")
         }
