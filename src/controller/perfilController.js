@@ -88,7 +88,7 @@ const updatePartePerfil = (request, response) => {
         if (error) {
             return response.status(404).send(error)
         } else {
-            return response.status(200).send({ mensage: 'Nível atualizado com sucesso!', perfil })
+            return response.status(200).send({ mensage: 'Campo atualizado com sucesso!', perfil })
         }
     })
 }
