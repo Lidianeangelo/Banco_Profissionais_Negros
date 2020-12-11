@@ -4,10 +4,10 @@ const dotenv = require("dotenv")
 dotenv.config()
 
 //const DB_URL="mongodb://localhost:27017/banco_profissionais"
-const MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost:27017/banco_profissionais"
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://deploy:camila02042009@cluster0.jmolg.mongodb.net/banco_profissionaisnegros?retryWrites=true&w=majority"
 
 const connect = () => {
-    mongoose.connect(MONGODB_URL,
+    mongoose.connect(MONGODB_URI,
         { useNewUrlParser: true })
     const connection = mongoose.connection
 
