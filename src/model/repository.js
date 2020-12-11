@@ -4,7 +4,7 @@ const dotenv = require("dotenv")
 dotenv.config()
 
 //const DB_URL="mongodb://localhost:27017/banco_profissionais"
-const DB_URI = process.env.DB_URI || "mongodb+srv://admin_banco:camila02042009@cluster0.jmolg.mongodb.net/<banco_profissionaisnegros>?retryWrites=true&w=majority"
+const DB_URI = process.env.DB_URI || "mongodb+srv://admin_banco:camila02042009@cluster0.jmolg.mongodb.net/banco_profissionaisnegros?retryWrites=true&w=majority"
 
 const JWT = process.env.JWT
 
