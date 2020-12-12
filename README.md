@@ -193,7 +193,7 @@ Funcionalidades da aplicação
 Essa frase foi a que eu mais ouvi durante o curso do Reprograma. Toda vez que a mentalizo, me sinto preparada para encarar mais e mais. Me encorajou a continuar e concluir. Eu sou eternamente grata pelo conhecimento que obtive nesse período e principalmente pela troca de experiências que tive com minhas colegas de turma. Desejo toda boa sorte para todas nas suas caminhadas!
 
 <p>Quer me conhecer mais?</p>
-<p>[{Github}] (https://www.linkedin.com/in/lidianeangelo/)</p>
-<p>[{Linkedin}] (https://www.linkedin.com/in/lidianeangelo/)</p>
+<p>[{Github}](https://www.linkedin.com/in/lidianeangelo/)</p>
+<p>[{Linkedin}](https://www.linkedin.com/in/lidianeangelo/)</p>
 
 Tchau! :wave:
