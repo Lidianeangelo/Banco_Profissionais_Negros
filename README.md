@@ -49,7 +49,7 @@ Para a execução do projeto final, desenvolvemos uma API fundamentada no modelo
 
         Arquitetura MVC
         |
-        \--:open_file_folder: Banco_Profissionais_Negros
+        \--📂Banco_Profissionais_Negros
             |   README.md  
             |   .env
             |   .gitignore
@@ -57,29 +57,29 @@ Para a execução do projeto final, desenvolvemos uma API fundamentada no modelo
             |   package.json
             |   Procfile
             |   **server.js**
-            \--:open_file_folder: node_modules
-            \--:open_file_folder: apoio
-            \--:open_file_folder: src
+            \--📂 node_modules
+            \--📂 apoio
+            \--📂 src
                 |
                 |   **app.js**
                 |
-                :open_file_folder:---controller
+                📂---controller
                 |       **perfilController.js**
                 |
-                :open_file_folder:---data
+                📂---data
                 |   **data.json**
                 |
-                :open_file_folder:---model
+                📂---model
                 |       **perfilSchema.js
                 |       repository.js**
                 |       
                 |
-                :open_file_folder:---routes
+                📂---routes
                 |       **index.js
                 |__      perfilRoute.js**
 
 
-Clique para visualizar o desenho da [Arquitetura](/apoio/banco_arquitetura.png)
+![arquitetura](./apoio/banco_arquitetura.png)
 
 =================
 
@@ -130,10 +130,10 @@ Funcionalidades da aplicação
 ### Rotas
 
 #### Retorna todos os dados do banco de dados
-- [x]"/" - getAllPerfil 
+- [x]"/" 
 
 #### Retorna cadastro por id
-- [x]"/id/:id" - getPerfilById
+- [x]"/id/:id" 
 
 #### Cria novo cadastro e retorna mensagem amigável
 - [x] "/perfilNovo" 
@@ -193,7 +193,7 @@ Funcionalidades da aplicação
 Essa frase foi a que eu mais ouvi durante o curso do Reprograma. Toda vez que a mentalizo, me sinto preparada para encarar mais e mais. Me encorajou a continuar e concluir. Eu sou eternamente grata pelo conhecimento que obtive nesse período e principalmente pela troca de experiências que tive com minhas colegas de turma. Desejo toda boa sorte para todas nas suas caminhadas!
 
 <p>Quer me conhecer mais?</p>
-<p>[{Github}] https://www.linkedin.com/in/lidianeangelo/</p>
-<p>[{Linkedin}] https://www.linkedin.com/in/lidianeangelo/</p>
+<p>[{Github}] (https://www.linkedin.com/in/lidianeangelo/)</p>
+<p>[{Linkedin}] (https://www.linkedin.com/in/lidianeangelo/)</p>
 
 Tchau! :wave:
