@@ -1,4 +1,4 @@
-
+![logo](./apoio/logo_projeto.png)
 # API - Banco de Profissionais Negros
 ## Projeto de Conclusão de Curso
 
